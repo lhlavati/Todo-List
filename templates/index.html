@@ -16,9 +16,9 @@
         </form>
     </div>
     <ul>
-        <input type="checkbox">Some text <br>
-        <input type="checkbox">Some text <br>
-        <input type="checkbox">Some text <br>
+        {% for todo in todos %}
+        <input type="checkbox">{{ todo.text }}<br>
+        {% endfor %}
     </ul>
 </body>
 </html>
