@@ -8,6 +8,8 @@
     <title>Todo List</title>
 </head>
 <body>
+    <a href="{{ url_for('login') }}">Login</a>
+    <a href="{{ url_for('signup') }}">Sign up</a>
     <h1>Todo List</h1>
     <div>
         Add a new todo item: 
@@ -20,7 +22,7 @@
         <h2>Incomplete Items</h2>
         <ul>
             {% for todo in incomplete %}
-            {{ todo.text }} <a href="{{ url_for('complete', id=todo.id) }}"><i class="far fa-check-circle"></i></a><br>
+            {{ todo.text }} <a href="{{ url_for('complete', id=todo.id) }}"><i class="far fa-check-circle"></i>Mark as Complete</a><br>
             {% endfor %} 
         </ul>
         <h2>Completed Items</h2>
